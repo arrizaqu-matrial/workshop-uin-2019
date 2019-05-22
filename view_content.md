@@ -13,7 +13,12 @@
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Hello, Java Spring Boot</h1>
         <p class="lead">Table : Employee</p>
-        	Tulis kontent disini ..
+        	<form action="#" th:action="@{/employee/save}" 
+        	 							th:object="${employee}" method="POST">
+			Name : <input type="text" th:field="*{name}"/><br/>
+			Email : <input type="text" th:field="*{email}"/><br/>
+			<input type="submit" value="Save Data" />
+		    </form>
       </div>
     </div>
   </div>
